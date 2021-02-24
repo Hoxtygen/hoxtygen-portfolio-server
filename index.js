@@ -56,6 +56,7 @@ app.post("/api/form", (req, res) => {
         return res.status(400).json({
           status: 400,
           message: "Error Sending message",
+          errorMessage: err
         });
       }
      return res.status(200).json({
