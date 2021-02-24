@@ -44,9 +44,9 @@ app.post("/api/form", (req, res) => {
     });
 
     let mailOptions = {
-      from: process.env.SERVICEACCESS,
-      to: process.env.SERVICEACCESSNETWORKRECEIVER,
-      replyTo: process.env.SERVICEACCESSNETWORKRECEIVER,
+      from: req.body.email,
+      to: process.env.SERVICEACCESS,
+      replyTo: process.env.SERVICEACCESS,
       subject: "New Message from Portfolio site",
       text: req.body.message,
       html: htmlEmail,
